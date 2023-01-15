@@ -2,6 +2,7 @@
 {% block title %}Board{% endblock %}
 {% block content%}
 <div class="container">
+    <p id="stats">Highscore = {{highscore}} &nbsp  &nbsp Number of plays = {{num_plays}}</p>
 <table class="">
 {% for row in board %}
 <tr> 
@@ -12,8 +13,22 @@
 {% endfor %}
 </table>
 </div>
-<form action="">
-    <input type="text" placeholder="enter guess"><button>Submit</button>
-</form> 
+<form action="" method="" class="add-word">
+    <input type="text" placeholder="enter guess" autocomplete="off" name="word" id="word"><button>Submit</button>
+</form>
+<div class="container text-center">
+    <div class="row">
+<div class="col-4"><div class="scoreboard">
+    <h3>SCORE</h3>
+    <p id="postscore">0</p>
+</div></div>
+<div class="col-4"><p id="word_check"></p></div>
+<div class="col-4"><div class="timer">
+    <h3>TIMER</h3>
+    <p id="count">60</p>
+</div></div>
+</div> </div>
 {% endblock %}
+
+
 
